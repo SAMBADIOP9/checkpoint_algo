@@ -1,0 +1,38 @@
+**********ci-dessous un algorithme sous python qui compte le nombre de mot et de voyelle dans une phrase**********
+def compte_mots_et_voyelles(phrase):
+    # Compter le nombre de mots
+    mots = phrase.split()
+    nombre_de_mots = len(mots)
+
+    # Compter le nombre de voyelles
+    voyelles = "aeiouAEIOU"
+    nombre_de_voyelles = sum(1 for char in phrase if char in voyelles)
+
+    return nombre_de_mots, nombre_de_voyelles
+
+# Exemple d'utilisation
+phrase_exemple = "je m'appelle samba diop."
+
+**********Algorithme qui donne la somme des élements distincts de deux sous ensemble
+
+def somme_elements_distincts(ensemble1, ensemble2):
+    # Création d'un ensemble pour stocker les éléments distincts
+    ensemble_distinct = set()
+
+    # Ajout des éléments distincts de ensemble1 à ensemble_distinct
+    ensemble_distinct.update(ensemble1)
+
+    # Ajout des éléments distincts de ensemble2 à ensemble_distinct
+    ensemble_distinct.update(ensemble2)
+
+    # Calcul de la somme des éléments distincts
+    somme = sum(ensemble_distinct)
+
+    # Affichage du résultat
+    print("La somme des éléments distincts est :", somme)
+
+# Exemple d'utilisation
+ensemble1 = {8, 2, 7, 4, 5}
+ensemble2 = {4, 9, 6, 10, 8}
+
+somme_elements_distincts(ensemble1, ensemble2)
